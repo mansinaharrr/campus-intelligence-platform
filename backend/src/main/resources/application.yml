@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: campus-intelligence
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/campus_intel}
+    username: ${POSTGRES_USER:campus}
+    password: ${POSTGRES_PASSWORD:campus}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  flyway:
+    enabled: true
+
+server:
+  port: 8080
+
+campus:
+  timezone: ${CAMPUS_TIMEZONE:Asia/Kolkata}
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
